@@ -45,6 +45,7 @@ class UsuarioTest extends PHPUnit_Framework_TestCase
     {
         $user = new Usuario("Silvio", "Santos", 86);
         $expected = 85;
+        
         $actual = $user->getIdade();
         $this->assertEquals($expected, $actual);
     }

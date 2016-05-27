@@ -1,2 +1,3 @@
 /phpunit/vendor
+/jenkins.war
 .DS_Store
