@@ -40,6 +40,7 @@ Para utilizar testes unitários com phpunit no CI2 é necessário fazer hack em 
 
 Para utilizar testes unitários com phpunit no CI3 é necessário hack nos arquivos: /system/Codeigniter.php e core/URI.php.
 
+### Hacks
 > system/Codeigniter.php: (linha 531)
 >> ` if ($EXT->_call_hook('display_override') === FALSE && !defined('PHPUNIT_TEST')) `
 
