@@ -1,5 +1,6 @@
 <?php
 
+
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
@@ -18,7 +19,7 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-    define('ENVIRONMENT', 'testing');
+    define('ENVIRONMENT', 'development');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -44,6 +45,17 @@ if (defined('ENVIRONMENT'))
         default:
             exit('The application environment is not set correctly.');
     }
+}
+
+/*
+ *---------------------------------------------------------------
+ * DS CONSTANT VERIFICATION
+ *---------------------------------------------------------------
+ *  Verifying if DS constant don't exists
+ *  - If yes, define it!
+ */
+if( !defined('DS')){
+    define('DS', DIRECTORY_SEPARATOR);
 }
 
 /*
@@ -168,9 +180,10 @@ if (defined('ENVIRONMENT'))
     // Path to the system directory
     define('BASEPATH', $system_path);
     // Path to the front controller (this file) directory
-    define('FCPATH', realpath(dirname(__FILE__).'/../..').DIRECTORY_SEPARATOR);
+    define('FCPATH', realpath(dirname(__FILE__).'/../').DIRECTORY_SEPARATOR);
     // Name of the "system" directory
     define('SYSDIR', basename(BASEPATH));
+
 
     // The path to the "application" folder
     if (is_dir($application_folder))
@@ -189,13 +202,21 @@ if (defined('ENVIRONMENT'))
 
 /*
  * --------------------------------------------------------------------
+ * REQUIRE COMPOSER FOLDERS
+ * --------------------------------------------------------------------
+ *
+ */
+// if( is_dir(__DIR__ . DS . 'vendor' . DS) && file_exists(__DIR__ . DS . '../vendor' . DS . 'autoload.php'))
+//     require_once __DIR__ . DS . '../vendor' . DS . 'autoload.php';
+/*
+ * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
  * --------------------------------------------------------------------
  *
  * And away we go...
  *
  */
-// require_once BASEPATH.'core/CodeIgniter.php';
+require_once BASEPATH.'core/CodeIgniter.php';
 
 /* End of file index.php */
 /* Location: ./index.php */
