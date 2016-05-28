@@ -206,8 +206,9 @@ if( !defined('DS')){
  * --------------------------------------------------------------------
  *
  */
-// if( is_dir(__DIR__ . DS . 'vendor' . DS) && file_exists(__DIR__ . DS . '../vendor' . DS . 'autoload.php'))
-//     require_once __DIR__ . DS . '../vendor' . DS . 'autoload.php';
+if( is_dir(__DIR__ . DS . '../vendor' . DS) && file_exists(__DIR__ . DS . '../vendor' . DS . 'autoload.php')) {
+    require_once __DIR__ . DS . '../vendor' . DS . 'autoload.php';
+}
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
@@ -217,6 +218,7 @@ if( !defined('DS')){
  *
  */
 require_once BASEPATH.'core/CodeIgniter.php';
+require_once dirname(__FILE__) . '/CI_Tests.php';
 
 /* End of file index.php */
 /* Location: ./index.php */

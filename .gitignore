@@ -1,4 +1,8 @@
-/phpunit/vendor
+/phpunit/vendor/
 /jenkins.war
 /phpunit-ci2/build/*
+/phpunit-ci2/vendor/*
+/phpunit-ci3/tests/build/*
+/phpunit-ci3/vendor/*
 .DS_Store
+*.lock
