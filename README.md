@@ -60,6 +60,8 @@ Para utilizar testes unitários com phpunit no CI3 é necessário hack nos arqui
 
 2. O sistema utiliza o composer.json da pasta do projeto, e instala as dependencias como phpunit, e outras necessidades para os testes.
 
-3. Para rodar os tests, utilizar o comando: ./phpunit/vendor/bin/phpunit --colors phpunit/tests
+3. Para rodar os tests, utilizar o comando: 
+> cd phpunit-ci2 ou cd phpunit-ci3
+> ./vendor/bin/phpunit
 
 ... em andamento
