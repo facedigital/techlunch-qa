@@ -1,0 +1,24 @@
+<phpunit
+    colors="true"
+    verbose="true"
+    bootstrap="./vendor/autoload.php">
+    <testsuites>
+        <testsuite name="FDS CI Test Suite">
+            <directory suffix="Test.php">./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <const name="PHPUNIT_TEST" value="1" />
+        <const name="PHPUNIT_CHARSET" value="UTF-8" />
+        <server name="REMOTE_ADDR" value="0.0.0.0" />
+    </php>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./application/controllers</directory>
+            <directory suffix=".php">./application/models</directory>
+            <directory suffix=".php">./application/libraries</directory>
+            <directory suffix=".php">./application/helpers</directory>
+            <directory suffix=".php">./application/hooks</directory>
+        </whitelist>
+    </filter>
+</phpunit>
