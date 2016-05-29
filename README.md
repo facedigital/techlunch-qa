@@ -22,7 +22,7 @@ Pré-requisitos: nodejs e npm (node package manager) instalado.
 
 ## Codeigniter 2 ##
 
-Para utilizar testes unitários com phpunit no CI2 é necessário fazer hack em 3 arquivos do core. São eles: system/core/Utf8.php, system/core/URI.php e /system/Codeigniter.php.
+Para utilizar testes unitários com phpunit no CI2 é necessário fazer hack em 2 arquivos do core. São eles: system/core/Utf8.php e /system/Codeigniter.php.
 
 ### Hacks
 > system/core/Utf8.php: (linha 48)
